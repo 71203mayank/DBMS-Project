@@ -1,0 +1,50 @@
+.home-page{
+    width: 100vw;
+    position: absolute;
+    overflow-x: hidden;
+}
+.home{
+    width:100vw;
+    height: 100vh;
+    background-image: url(./../../../public/Assets/hero_img.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: 50%;
+    color:whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.home-title{
+    margin-left:50px;
+}
+.home-title-big{
+    font-size: 64px;
+    line-height: 68px;
+    font-weight: 600;
+}
+.home-title-small{
+    margin-top:16px;
+    font-size:32px;
+    line-height: 32px;
+}
+.search-train{
+    margin-right: 50px;
+    position: absolute;
+    bottom:100px;
+    right:0px
+}
+.search-train-button{
+    font-size: 32px;
+    border: 1px solid white;
+    padding-inline: 32px;
+    padding-block: 8px;
+    border-radius: 50px 50px 50px 50px ;
+}
+
+
+.slidin{
+    z-index: 2;
+    transition: transform 10s ease;
+}
