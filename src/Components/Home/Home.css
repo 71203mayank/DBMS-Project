@@ -1,50 +1,113 @@
 .home-page{
     width: 100vw;
-    position: absolute;
+    position: relative;
     overflow-x: hidden;
 }
 .home{
     width:100vw;
     height: 100vh;
-    background-image: url(./../../../public/Assets/hero_img.jpg);
+    background-image: url(./../../../public/Assets/hero_img2.svg);
     background-repeat: no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     background-position-y: 50%;
     color:whitesmoke;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     z-index: 1;
+    padding-bottom: 25vh;
 }
 .home-title{
     margin-left:50px;
 }
 .home-title-big{
     font-size: 64px;
-    line-height: 68px;
+    line-height: 74px;
     font-weight: 600;
 }
 .home-title-small{
     margin-top:16px;
     font-size:32px;
-    line-height: 32px;
+    line-height: 37px;
 }
 .search-train{
     margin-right: 50px;
-    position: absolute;
-    bottom:100px;
-    right:0px
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 .search-train-button{
     font-size: 32px;
-    border: 1px solid white;
+    font-weight: 600;
+    border: 2px solid white;
     padding-inline: 32px;
     padding-block: 8px;
     border-radius: 50px 50px 50px 50px ;
+    backdrop-filter: blur(15px);
 }
-
-
 .slidin{
     z-index: 2;
     transition: transform 10s ease;
+}
+
+
+.home-extra-one{
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-features{
+    height: 150px;
+    /* width:600px; */
+    /* width:1024px; */
+    /* width:75vw; */
+    width: clamp(600px, 75vw,1024px);
+    /* border: 1px solid black; */
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.feature{
+    height:200px;
+    width: 100px;
+    /* border: 1px solid black; */
+}
+
+.new-offer{
+    text-align: center;
+    position: relative;
+    left:40px;
+    bottom: 10px;
+    font-weight: bolder;
+    width: max-content;
+    padding-inline: 10px;
+    font-size: 10px;
+    color:white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+.offer-img{
+    height:100px;
+    width:100px;
+}
+.offer{
+    text-align: center;
+    font-size: 16px;
+}
+
+.train-offer{
+    opacity: 0;
+}
+
+
+.home-extra-two{
+    height:500px;
+    background-color: rgb(115, 115, 115);
 }
