@@ -8,10 +8,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 
-.search-form{
-    width:400px;
-    height:400px;
-    border:1px solid black;
+.search-train-input,.search-train-date{
+    width:200px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+
+.searched-train-container{
+    background-color: antiquewhite;
+    width:100%;
+    overflow-y: scroll;
+    margin-top: 100px;
 }

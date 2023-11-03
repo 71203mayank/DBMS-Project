@@ -1,0 +1,38 @@
+.train-card{
+    width:80%;
+    margin-inline: 10%;
+    margin-block:10px;
+    border: 1px solid black;
+}
+.train-card-header{
+    display: flex;
+    justify-content: space-between;
+    padding-block:10px;
+    font-size:24px;
+    border: 1px solid black;
+    padding-inline: 10px;
+}
+
+.train-card-body{
+    display: flex;
+}
+.train-card-station{
+    flex:1;
+    /* text-align: center; */
+}
+.train-card-dist{
+    flex:1;
+    text-align: center;
+}
+
+.train-card-classes{
+    display: flex;
+    justify-content: space-between;
+}
+.available-class{
+    display: flex;
+}
+.train-card-class{
+    padding: 10px;
+    border: 1px solid black;
+}
