@@ -1,0 +1,542 @@
+import { useCallback } from "react";
+
+const AdminModeHome = () => {
+  const onAllTripsContainerClick = useCallback(() => {
+    // Please sync "admin mode - Manage User" to the project
+  }, []);
+
+  const onTravelsContainerClick = useCallback(() => {
+    // Please sync "admin mode - Register users" to the project
+  }, []);
+
+  const onRoomsContainerClick = useCallback(() => {
+    // Please sync "admin mode -Booking history" to the project
+  }, []);
+
+  const onTransportContainerClick = useCallback(() => {
+    // Please sync "admin mode - book tickets" to the project
+  }, []);
+
+  const onAttractionsContainerClick = useCallback(() => {
+    // Please sync "admin mode - cancel tickets" to the project
+  }, []);
+
+  const onFrameContainer2Click = useCallback(() => {
+    // Please sync "admin page" to the project
+  }, []);
+
+  const onHomeContainer2Click = useCallback(() => {
+    // Please sync "admin mode - booking history result" to the project
+  }, []);
+
+  const onHomeContainer5Click = useCallback(() => {
+    // Please sync "admin mode - search for train tickets" to the project
+  }, []);
+
+  return (
+    <div className="relative rounded-[15.38px] bg-ghostwhite w-full h-[800px] overflow-hidden text-left text-[15.38px] text-gray-100 font-sora">
+      <div className="absolute top-[0px] left-[0px] rounded-[15.38px] bg-white w-[280.77px] h-[597.12px]">
+        <div className="absolute top-[597.12px] left-[17.31px] rounded-[15.38px] bg-ghostwhite w-[234.62px] h-[203.85px] text-center text-[11.54px] text-darkgray">
+          <img
+            className="absolute top-[23.08px] left-[23.08px] w-[52.88px] h-[52.88px] overflow-hidden"
+            alt=""
+            src="/cloudy-color-icon.svg"
+          />
+          <div className="absolute top-[16.35px] left-[93.27px] w-[55.77px] h-[46.15px] text-left text-[30.77px] text-gray-100">
+            <b className="absolute top-[0px] left-[0px] leading-[46.15px]">
+              30
+            </b>
+            <b className="absolute top-[4.81px] left-[45.19px] text-[23.08px]">
+              °
+            </b>
+          </div>
+          <div className="absolute top-[61.54px] left-[91.35px] flex flex-row items-center justify-start gap-[7.69px] text-left text-[13.46px]">
+            <img
+              className="relative w-[11.54px] h-[11.54px]"
+              alt=""
+              src="/compass-icon.svg"
+            />
+            <div className="relative leading-[19.23px] font-semibold">Rome</div>
+          </div>
+          <img
+            className="absolute top-[23.08px] right-[14.44px] w-[22.56px] h-[24.04px]"
+            alt=""
+            src="/more-icon.svg"
+          />
+          <div className="absolute bottom-[23.08px] left-[calc(50%_-_95.19px)] w-[38.46px] h-[73.08px]">
+            <img
+              className="absolute top-[0px] left-[calc(50%_-_11.54px)] w-[23.08px] h-[23.08px] overflow-hidden"
+              alt=""
+              src="/cloudy-icon.svg"
+            />
+            <div className="absolute w-full top-[53.85px] left-[0px] tracking-[0.38px] leading-[15.38px] inline-block h-[19.23px]">
+              Mo
+            </div>
+            <div className="absolute top-[26.92px] left-[9.62px] w-[20.19px] h-[19.23px] text-right text-[13.46px] text-gray-100">
+              <div className="absolute top-[calc(50%_-_9.62px)] left-[0px] leading-[19.23px] font-semibold">
+                31
+              </div>
+              <b className="absolute top-[1.92px] left-[15.38px] text-[9.62px] text-left">
+                °
+              </b>
+            </div>
+          </div>
+          <div className="absolute bottom-[23.08px] left-[calc(50%_-_56.73px)] w-[38.46px] h-[73.08px]">
+            <img
+              className="absolute top-[0px] left-[calc(50%_-_11.54px)] w-[23.08px] h-[23.08px] overflow-hidden"
+              alt=""
+              src="/hail-day-icon.svg"
+            />
+            <div className="absolute w-full top-[53.85px] left-[0px] tracking-[0.38px] leading-[15.38px] inline-block h-[19.23px]">
+              Tu
+            </div>
+            <div className="absolute top-[26.92px] left-[7.69px] w-[24.04px] h-[19.23px] text-right text-[13.46px] text-gray-100">
+              <div className="absolute top-[calc(50%_-_9.62px)] left-[0px] leading-[19.23px] font-semibold">
+                29
+              </div>
+              <b className="absolute top-[1.92px] left-[19.23px] text-[9.62px] text-left">
+                °
+              </b>
+            </div>
+          </div>
+          <div className="absolute bottom-[23.08px] left-[calc(50%_-_18.27px)] w-[38.46px] h-[73.08px]">
+            <img
+              className="absolute top-[0px] left-[calc(50%_-_11.54px)] w-[23.08px] h-[23.08px] overflow-hidden"
+              alt=""
+              src="/sunny-icon.svg"
+            />
+            <div className="absolute w-full top-[53.85px] left-[0px] tracking-[0.38px] leading-[15.38px] inline-block h-[19.23px]">
+              We
+            </div>
+            <div className="absolute top-[26.92px] left-[7.69px] w-[23.08px] h-[19.23px] text-right text-[13.46px] text-gray-100">
+              <div className="absolute top-[calc(50%_-_9.62px)] left-[0px] leading-[19.23px] font-semibold">
+                33
+              </div>
+              <b className="absolute top-[1.92px] left-[18.27px] text-[9.62px] text-left">
+                °
+              </b>
+            </div>
+          </div>
+          <div className="absolute bottom-[23.08px] left-[calc(50%_+_20.19px)] w-[38.46px] h-[73.08px]">
+            <img
+              className="absolute top-[0px] left-[calc(50%_-_11.54px)] w-[23.08px] h-[23.08px] overflow-hidden"
+              alt=""
+              src="/stormy-icon.svg"
+            />
+            <div className="absolute w-full top-[53.85px] left-[0px] tracking-[0.38px] leading-[15.38px] inline-block h-[19.23px]">
+              Th
+            </div>
+            <div className="absolute top-[26.92px] left-[7.69px] w-[23.08px] h-[19.23px] text-right text-[13.46px] text-gray-100">
+              <div className="absolute top-[calc(50%_-_9.62px)] left-[0px] leading-[19.23px] font-semibold">
+                28
+              </div>
+              <b className="absolute top-[1.92px] left-[18.27px] text-[9.62px] text-left">
+                °
+              </b>
+            </div>
+          </div>
+          <div className="absolute bottom-[23.08px] left-[calc(50%_+_58.65px)] w-[38.46px] h-[73.08px]">
+            <img
+              className="absolute top-[0px] left-[calc(50%_-_11.54px)] w-[23.08px] h-[23.08px] overflow-hidden"
+              alt=""
+              src="/sunny-icon1.svg"
+            />
+            <div className="absolute w-full top-[53.85px] left-[0px] tracking-[0.38px] leading-[15.38px] inline-block h-[19.23px]">
+              Fr
+            </div>
+            <div className="absolute top-[26.92px] left-[7.69px] w-[23.08px] h-[19.23px] text-right text-[13.46px] text-gray-100">
+              <div className="absolute top-[calc(50%_-_9.62px)] left-[0px] leading-[19.23px] font-semibold">
+                32
+              </div>
+              <b className="absolute top-[1.92px] left-[18.27px] text-[9.62px] text-left">
+                °
+              </b>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[33.65px] left-[65.38px] w-[150.96px] h-[51.92px] text-[33.22px]">
+          <div className="absolute top-[0px] left-[0px] w-[150.96px] h-[52.88px]">
+            <b className="absolute top-[0.96px] left-[48.08px] leading-[49.83px]">
+              RMS
+            </b>
+            <img
+              className="absolute top-[7.69px] left-[0px] w-[32.69px] h-[36.54px] overflow-hidden"
+              alt=""
+              src="/fa6solidtraintram.svg"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[223.08px] left-[23.08px] w-[234.62px] h-[353.85px]">
+          <div className="absolute h-[13.04%] top-[0%] bottom-[86.96%] left-[0px] rounded-[15.38px] bg-gainsboro w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px]">
+            <img
+              className="relative w-[23.08px] h-[23.08px] overflow-hidden shrink-0"
+              alt=""
+              src="/home-icon.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">Home</div>
+          </div>
+          <div
+            className="absolute h-[13.32%] top-[17.26%] bottom-[69.43%] left-[0px] rounded-[15.38px] w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px] cursor-pointer"
+            onClick={onAllTripsContainerClick}
+          >
+            <img
+              className="relative w-[24.04px] h-[24.04px] overflow-hidden shrink-0"
+              alt=""
+              src="/materialsymbolsmanageaccounts.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">
+              Manage users
+            </div>
+          </div>
+          <div
+            className="absolute h-[13.3%] top-[34.65%] bottom-[52.04%] left-[0px] rounded-[15.38px] w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px] cursor-pointer"
+            onClick={onTravelsContainerClick}
+          >
+            <img
+              className="relative w-[23.08px] h-[23.08px] overflow-hidden shrink-0"
+              alt=""
+              src="/travels-icon.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">
+              Register Users
+            </div>
+          </div>
+          <div
+            className="absolute h-[19.57%] top-[48.91%] bottom-[31.52%] left-[0px] rounded-[15.38px] w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px] cursor-pointer"
+            onClick={onRoomsContainerClick}
+          >
+            <img
+              className="relative w-[24.04px] h-[24.04px] overflow-hidden shrink-0"
+              alt=""
+              src="/icoutlinehistory.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">
+              <p className="m-0">{`View User `}</p>
+              <p className="m-0">Booking History</p>
+            </div>
+          </div>
+          <div
+            className="absolute h-[13.32%] top-[69.43%] bottom-[17.26%] left-[0px] rounded-[15.38px] w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px] cursor-pointer"
+            onClick={onTransportContainerClick}
+          >
+            <img
+              className="relative w-[24.04px] h-[24.04px] overflow-hidden shrink-0"
+              alt=""
+              src="/materialsymbolslightbookoutline.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">
+              Book Tickets
+            </div>
+          </div>
+          <div
+            className="absolute h-[13.32%] top-[86.82%] bottom-[-0.14%] left-[0px] rounded-[15.38px] w-[234.62px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[15.38px] cursor-pointer"
+            onClick={onAttractionsContainerClick}
+          >
+            <img
+              className="relative w-[24.04px] h-[24.04px] overflow-hidden shrink-0"
+              alt=""
+              src="/icons8cancel2.svg"
+            />
+            <div className="relative leading-[23.08px] font-semibold">
+              Cancel Tickets
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[107.69px] left-[23.08px] overflow-y-auto flex flex-row items-start justify-start text-white">
+          <div className="rounded-[15.38px] bg-royalblue shadow-[0px_7.6923065185546875px_7.69px_rgba(52,_106,_255,_0.15)] w-[234.62px] flex flex-col items-center justify-start py-[11.538459777832031px] px-[30.76922607421875px] box-border">
+            <div className="flex flex-row items-center justify-start">
+              <div className="relative leading-[23.08px] font-semibold [text-shadow:0px_3.8461532592773438px_3.85px_rgba(0,_0,_0,_0.25)]">
+                ADMIN MODE
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="absolute top-[165.38px] left-[24.04px] flex flex-row items-start justify-start cursor-pointer text-white"
+          onClick={onFrameContainer2Click}
+        >
+          <div className="rounded-[15.38px] bg-cornflowerblue shadow-[0px_7.6923065185546875px_7.69px_rgba(52,_106,_255,_0.15)] w-[234.62px] flex flex-col items-center justify-start py-[11.538459777832031px] px-[30.76922607421875px] box-border">
+            <div className="flex flex-row items-center justify-start">
+              <div className="relative leading-[23.08px] font-semibold [text-shadow:0px_3.8461532592773438px_3.85px_rgba(0,_0,_0,_0.25)]">
+                USER MODE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-[calc(50%_+_86.54px)] left-[calc(50%_-_286.54px)] rounded-t-[11.54px] rounded-b-none bg-ghostwhite w-[736.54px] h-[473.08px] overflow-hidden hidden text-[13.46px]">
+        <b className="absolute top-[23.08px] left-[23.08px] text-[30.77px] leading-[46.15px]">
+          To do’s
+        </b>
+        <div className="absolute top-[calc(50%_-_136.54px)] left-[5.61%] leading-[19.23px] text-darkgray text-center">
+          #
+        </div>
+        <div className="absolute top-[calc(50%_-_136.54px)] left-[18.28%] leading-[19.23px] text-darkgray text-center">
+          Task name
+        </div>
+        <div className="absolute top-[calc(50%_-_136.54px)] left-[69.06%] leading-[19.23px] text-darkgray text-center">
+          Assignee
+        </div>
+        <div className="absolute top-[calc(50%_-_136.54px)] left-[84.6%] leading-[19.23px] text-darkgray text-center">
+          Priority
+        </div>
+        <div className="absolute top-[134.62px] left-[23.08px] w-[690.38px] h-[53.85px]">
+          <div className="absolute h-full w-[7.24%] top-[0%] right-[86.07%] bottom-[0%] left-[6.69%]">
+            <div className="absolute top-[calc(50%_-_11.54px)] left-[calc(50%_-_11.54px)] rounded-[95.19px] bg-white w-[23.08px] h-[23.08px]" />
+          </div>
+          <div className="absolute h-full w-[54.18%] top-[0%] right-[31.89%] bottom-[0%] left-[13.93%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Elit est nibh cras phasellus scelerisque orci
+            </div>
+          </div>
+          <div className="absolute h-full w-[16.57%] top-[0%] right-[15.32%] bottom-[0%] left-[68.11%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Artur
+            </div>
+          </div>
+          <div className="absolute h-full w-[15.32%] top-[0%] right-[0%] bottom-[0%] left-[84.68%] text-[11.54px] text-white">
+            <div className="absolute top-[calc(50%_-_11.85px)] left-[15.38px] rounded-[95.19px] bg-coral flex flex-row items-center justify-start py-[3.8461532592773438px] px-[7.6923065185546875px]">
+              <div className="relative tracking-[0.38px] leading-[15.38px]">
+                Medium
+              </div>
+            </div>
+          </div>
+          <div className="absolute h-full w-[6.69%] top-[0%] right-[93.31%] bottom-[0%] left-[0%] text-center">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center justify-center">
+              1
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[196.15px] left-[23.08px] rounded-[15.38px] bg-white shadow-[0px_9.615384101867676px_33.65px_rgba(9,_16,_44,_0.07)] w-[690.38px] h-[53.85px]">
+          <div className="absolute h-full w-[7.24%] top-[0%] right-[86.07%] bottom-[0%] left-[6.69%]">
+            <div className="absolute top-[calc(50%_-_11.54px)] left-[calc(50%_-_11.54px)] rounded-[95.19px] bg-white box-border w-[23.08px] h-[23.08px] border-[1px] border-solid border-gray-200" />
+          </div>
+          <div className="absolute h-full w-[54.18%] top-[0%] right-[31.89%] bottom-[0%] left-[13.93%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Urna nibh eget facilisis egestas mi
+            </div>
+          </div>
+          <img
+            className="absolute h-full w-[16.57%] top-[0%] right-[15.32%] bottom-[0%] left-[68.11%] max-w-full overflow-hidden max-h-full"
+            alt=""
+            src="/assignee.svg"
+          />
+          <img
+            className="absolute h-full w-[15.32%] top-[0%] right-[0%] bottom-[0%] left-[84.68%] max-w-full overflow-hidden max-h-full"
+            alt=""
+            src="/options.svg"
+          />
+          <div className="absolute h-full w-[6.69%] top-[0%] right-[93.31%] bottom-[0%] left-[0%] text-center">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center justify-center">
+              2
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[257.69px] left-[23.08px] w-[690.38px] h-[53.85px]">
+          <div className="absolute h-full w-[7.24%] top-[0%] right-[86.07%] bottom-[0%] left-[6.69%]">
+            <div className="absolute top-[calc(50%_-_11.54px)] left-[calc(50%_-_11.54px)] rounded-[95.19px] bg-white w-[23.08px] h-[23.08px]" />
+          </div>
+          <div className="absolute h-full w-[54.18%] top-[0%] right-[31.89%] bottom-[0%] left-[13.93%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Enim tincidunt orci curabitur habitant.
+            </div>
+          </div>
+          <div className="absolute h-full w-[16.57%] top-[0%] right-[15.32%] bottom-[0%] left-[68.11%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Artur
+            </div>
+          </div>
+          <div className="absolute h-full w-[15.32%] top-[0%] right-[0%] bottom-[0%] left-[84.68%] text-[11.54px] text-white">
+            <div className="absolute top-[calc(50%_-_11.85px)] left-[15.38px] rounded-[95.19px] bg-coral flex flex-row items-center justify-start py-[3.8461532592773438px] px-[7.6923065185546875px]">
+              <div className="relative tracking-[0.38px] leading-[15.38px]">
+                Medium
+              </div>
+            </div>
+          </div>
+          <div className="absolute h-full w-[6.69%] top-[0%] right-[93.31%] bottom-[0%] left-[0%] text-center">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center justify-center">
+              3
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[319.23px] left-[23.08px] w-[690.38px] h-[53.85px]">
+          <div className="absolute h-full w-[7.24%] top-[0%] right-[86.07%] bottom-[0%] left-[6.69%]">
+            <div className="absolute top-[calc(50%_-_11.54px)] left-[calc(50%_-_11.54px)] rounded-[95.19px] bg-white w-[23.08px] h-[23.08px]" />
+          </div>
+          <div className="absolute h-full w-[54.18%] top-[0%] right-[31.89%] bottom-[0%] left-[13.93%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Sed condimentum magnis dui bibendum
+            </div>
+          </div>
+          <div className="absolute h-full w-[16.57%] top-[0%] right-[15.32%] bottom-[0%] left-[68.11%]">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center">
+              Marta
+            </div>
+          </div>
+          <div className="absolute h-full w-[15.32%] top-[0%] right-[0%] bottom-[0%] left-[84.68%] text-[11.54px] text-white">
+            <div className="absolute top-[calc(50%_-_11.85px)] left-[15.38px] rounded-[95.19px] bg-crimson flex flex-row items-center justify-start py-[3.8461532592773438px] px-[7.6923065185546875px]">
+              <div className="relative tracking-[0.38px] leading-[15.38px]">
+                High
+              </div>
+            </div>
+          </div>
+          <div className="absolute h-full w-[6.69%] top-[0%] right-[93.31%] bottom-[0%] left-[0%] text-center">
+            <div className="absolute h-[calc(100%_-_26.92px)] w-[calc(100%_-_30.77px)] top-[13.46px] left-[15.38px] leading-[19.23px] flex items-center justify-center">
+              4
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[403.37px] left-[calc(50%_-_345.67px)] rounded-[15.38px] bg-ghostwhite box-border w-[691.35px] flex flex-col items-center justify-center py-[11.538459777832031px] px-[30.76922607421875px] text-[15.38px] text-dimgray border-[1px] border-solid border-darkgray">
+          <div className="flex flex-row items-center justify-start gap-[7.69px]">
+            <div className="relative leading-[23.08px] font-semibold">
+              Add new task
+            </div>
+            <img
+              className="relative w-[23.08px] h-[23.08px]"
+              alt=""
+              src="/plus-icon.svg"
+            />
+          </div>
+        </div>
+        <img
+          className="absolute top-[calc(50%_-_23.08px)] left-[calc(50%_-_368.27px)] w-[19.23px] h-[19.23px] overflow-hidden"
+          alt=""
+          src="/move-icon.svg"
+        />
+        <div className="absolute top-[calc(50%_-_202.38px)] right-[23.08px] flex flex-row items-center justify-end gap-[7.69px] text-[15.38px]">
+          <div className="relative leading-[23.08px] font-semibold">Sort</div>
+          <img
+            className="relative w-[15.38px] h-[15.38px] overflow-hidden shrink-0"
+            alt=""
+            src="/sort-icon.svg"
+          />
+        </div>
+        <img
+          className="absolute top-[218.27px] left-[632.69px] w-[23.08px] h-[23.08px] overflow-hidden"
+          alt=""
+          src="/bihandindex.svg"
+        />
+      </div>
+      <div className="absolute top-[945.19px] left-[883.65px] rounded-[15.38px] bg-white w-[280.77px] h-[164.42px] hidden">
+        <div className="absolute top-[23.08px] left-[23.08px] leading-[23.08px] font-semibold text-darkgray">
+          People
+        </div>
+        <div className="absolute top-[73.08px] left-[50.96px] leading-[23.08px] font-semibold">
+          /adults
+        </div>
+        <div className="absolute bottom-[20.19px] left-[23.08px] flex flex-row items-center justify-start gap-[7.69px] text-[13.46px]">
+          <img
+            className="relative w-[53.85px] h-[30.77px]"
+            alt=""
+            src="/avataer.svg"
+          />
+          <div className="relative leading-[19.23px]">Marta, Artur</div>
+        </div>
+        <b className="absolute top-[55.77px] left-[23.08px] text-[30.77px] leading-[46.15px]">
+          2
+        </b>
+        <img
+          className="absolute h-[18.71%] w-[10.96%] top-[69.01%] right-[8.22%] bottom-[12.28%] left-[80.82%] rounded-[95.19px] max-w-full overflow-hidden max-h-full"
+          alt=""
+          src="/add-people-icon.svg"
+        />
+        <img
+          className="absolute top-[23.08px] right-[15.38px] w-[23.08px] h-[23.08px]"
+          alt=""
+          src="/more-icon1.svg"
+        />
+      </div>
+      <div className="absolute top-[118.27px] left-[306.73px] rounded-[15.38px] bg-white w-[593.27px] h-[164.42px] text-dimgray">
+        <div className="absolute top-[23.08px] right-[15.38px] w-[23.08px] h-[23.08px]" />
+        <div className="absolute h-[34.5%] top-[12.87%] bottom-[52.63%] left-[35.58px] rounded-[15.38px] bg-ghostwhite w-[246.15px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border">
+          <div className="relative leading-[23.08px] font-semibold">
+            Enter UserName...
+          </div>
+        </div>
+        <div className="absolute top-[91.35px] left-[calc(50%_-_296.28px)] w-[378.1px]" />
+        <div
+          className="absolute top-[98.08px] left-[38.46px] rounded-[15.38px] bg-cornflowerblue w-[516.35px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border cursor-pointer text-gray-100"
+          onClick={onHomeContainer2Click}
+        >
+          <div className="relative leading-[23.08px] font-semibold flex items-center w-[300.96px] shrink-0">
+            View Booking History of User ...
+          </div>
+        </div>
+        <div className="absolute h-[34.5%] top-[14.03%] bottom-[51.46%] left-[308.65px] rounded-[15.38px] bg-ghostwhite w-[246.15px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border">
+          <div className="relative leading-[23.08px] font-semibold">
+            Enter UserID...
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-[26.92px] left-[929.81px] rounded-[14.42px] bg-cadetblue w-[281.73px] h-[63.46px] text-right text-[19.23px] text-black">
+        <div className="absolute h-[1.52%] w-[100.09%] top-[99.24%] right-[0.08%] bottom-[-0.76%] left-[-0.17%] box-border hidden opacity-[0.15] border-t-[1px] border-solid border-gray-100" />
+        <div className="absolute top-[23.08px] left-[41.35px] w-[30.77px] h-[34.62px] overflow-hidden" />
+        <img
+          className="absolute h-[41.86%] w-[9.79%] top-[24.42%] right-[79.38%] bottom-[33.72%] left-[10.84%] max-w-full overflow-hidden max-h-full"
+          alt=""
+          src="/vector.svg"
+        />
+        <div className="absolute top-[calc(50%_-_27.89px)] left-[calc(50%_-_90.87px)] w-[181.73px] h-[48.08px]">
+          <div className="absolute top-[5.77px] left-[20.19px] w-[153.85px] h-[36.54px] overflow-hidden">
+            <div className="absolute top-[4.81px] left-[0px] leading-[23.08px] flex items-center w-[136.54px] h-[31.73px]">
+              admin name
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        className="absolute top-[127.88px] left-[965.38px] rounded-[50.96px] w-[205.77px] h-[163.46px] object-cover"
+        alt=""
+        src="/image-1@2x.png"
+      />
+      <div className="absolute top-[485.58px] left-[309.62px] w-[564.35px] h-[275.66px] text-[14.9px]">
+        <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
+          <div className="absolute top-[-0.93px] left-[13.97px] rounded-mini-9 bg-blanchedalmond w-[538.28px] h-[281.24px] flex flex-col items-start justify-start p-[37.25088119506836px] box-border">
+            <div className="relative leading-[22.35px] font-semibold inline-block w-[127.58px]">
+              Next trip
+            </div>
+          </div>
+          <img
+            className="absolute top-[-27.01px] left-[94.99px] rounded-mini-9 w-[467.5px] h-[306.39px] overflow-hidden"
+            alt=""
+            src="/illustration.svg"
+          />
+        </div>
+        <div className="absolute top-[63.33px] left-[46.56px] text-[67.05px] leading-[100.58px] font-sorts-mill-goudy">
+          where to?
+        </div>
+      </div>
+      <img
+        className="absolute top-[312.5px] left-[933.65px] rounded-[15.38px] w-[276.92px] h-[443.27px] object-cover"
+        alt=""
+        src="/map@2x.png"
+      />
+      <div className="absolute top-[298.08px] left-[308.65px] rounded-[15.38px] bg-white w-[593.27px] h-[164.42px] text-dimgray">
+        <div className="absolute top-[23.08px] right-[15.38px] w-[23.08px] h-[23.08px]" />
+        <div className="absolute h-[34.5%] top-[12.87%] bottom-[52.63%] left-[35.58px] rounded-[15.38px] bg-ghostwhite w-[519.23px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border">
+          <div className="relative leading-[23.08px] font-semibold">
+            Enter travel route..
+          </div>
+        </div>
+        <div className="absolute top-[91.35px] left-[calc(50%_-_296.28px)] w-[378.1px]" />
+        <div
+          className="absolute top-[98.08px] left-[38.46px] rounded-[15.38px] bg-cornflowerblue w-[516.35px] flex flex-row items-center justify-start py-[11.538459777832031px] px-[15.384613037109375px] box-border gap-[12.5px] cursor-pointer text-gray-100"
+          onClick={onHomeContainer5Click}
+        >
+          <img
+            className="relative w-[24.04px] h-[24.04px] overflow-hidden shrink-0"
+            alt=""
+            src="/ionsearchoutline.svg"
+          />
+          <div className="relative leading-[23.08px] font-semibold flex items-center w-[300.96px] shrink-0">{`Search for train tickets `}</div>
+        </div>
+      </div>
+      <div className="absolute top-[30.77px] left-[306.73px] rounded-[19.23px] bg-white w-[597.12px] h-[59.62px]" />
+      <div className="absolute top-[33.65px] left-[calc(50%_-_59.62px)] text-[19.23px] leading-[23.08px] font-semibold text-black flex items-center w-[118.27px] h-[56.73px]">
+        Navigation
+      </div>
+    </div>
+  );
+};
+
+export default AdminModeHome;
