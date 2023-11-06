@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "./SearchTrain.css"
 import axios from 'axios';
-import TrainCard from '../TrainCard/TrainCard';
-// import TrainList from '../TrainList/TrainList';
+import TrainCard from '../../Components/TrainCard/TrainCard';
 
 function SearchTrain() {
   const [inputText1, setInputText1] = useState('');
@@ -86,15 +85,6 @@ function SearchTrain() {
         </div>
       </div>
       <div className='searched-train-container'>
-        {/* <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/>
-        <TrainCard/> */}
         {trainDetails.map((train, index)=>(
           <TrainCard
             index = {index} 

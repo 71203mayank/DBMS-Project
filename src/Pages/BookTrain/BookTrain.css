@@ -1,0 +1,39 @@
+.book-train{
+    margin-inline:10%;
+    margin-top:100px;
+    min-height: 100vh;
+}
+.book-train-header{
+    border:1px solid black;
+    border-radius: 12px;
+}
+.book-train-metadata{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    /* border: 1px solid black; */
+}
+
+.metadata-label{
+    padding-right: 5px;
+}
+.metadata-input{
+    padding:5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.metadata-default{
+    padding:5px;
+    border: 2px solid rgb(183, 183, 183);
+    background-color: rgb(183, 183, 183);
+    border-radius: 5px;
+    width:40px;
+    text-align: center;
+    margin-right: 2px;
+}
+.metadata-mobile-number{
+    width:200px;
+}
+.metadata-class, .metadata-passenger-count{
+    width:100px;
+}

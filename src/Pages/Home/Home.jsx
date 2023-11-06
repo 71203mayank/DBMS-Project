@@ -1,12 +1,8 @@
 import React from 'react'
 import "./Home.css";
-// import SearchTrain from '../SearchTrain/SearchTrain'
+import { Link } from 'react-router-dom';
+
 export default function Home() {
-    
-    // const [translateX, setTranslateX] = useState(100);
-    // function onClickHandle(){
-    //     setTranslateX(-20);
-    // }
 
     return (
         <div className='home-page'>
@@ -23,15 +19,12 @@ export default function Home() {
                     </div>
                     
                 </div>
-                <div className='search-train'>
+                <Link to='/search' className='search-train'>
                         <button className='search-train-button hover:text-teal-500 hover:bg-white' >
                             Search Trains
                         </button>
-                </div>
+                </Link>
             </div>
-            {/* <div className='slidin' style={{position:'absolute', top:'0',transform:`translateX(${translateX}vw)`}}>
-                <SearchTrain/>  
-            </div> */}
             <div className='home-extra-one'>
                 <div className='other-features'>
                     <div className="feature">

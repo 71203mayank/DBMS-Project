@@ -1,0 +1,27 @@
+.passenger-card{
+    width: 100%;
+    border:1px solid black;
+    border-radius: 12px;
+    margin-block: 5px;
+    padding:12px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.passenger-input{
+    padding:5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.passenger-name{
+    width:clamp(200px, 25vw, 500px);
+}
+.passenger-sex{
+    width:150px;
+}
+.passenger-age{
+    width:100px;
+}
+.passenger-label{
+    padding-right: 5px;
+}

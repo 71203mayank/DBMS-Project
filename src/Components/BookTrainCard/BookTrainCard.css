@@ -1,0 +1,16 @@
+.book-train-card{
+    width:100%;
+    padding: 12px;
+    /* border:1px solid black; */
+}
+.booked-train-detail{
+    display: flex;
+    justify-content: space-between;
+    /* font-size:36px; */
+    font-size: clamp(16px,2vw,36px);
+    font-weight: 600;
+}
+.booked-journey-detail{
+    display: flex;
+    justify-content: space-between;
+}
