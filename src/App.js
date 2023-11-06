@@ -14,7 +14,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path='home' element={<Home/>}/>
             <Route path='search' element={<SearchTrain/>}/>
-            <Route path='book' element={<BookTrain/>}/>
+            <Route path='book' render ={(props)=><BookTrain {...props}/>} element={<BookTrain/>}/>
+            {/* <Route path='book' element={<BookTrain/>}/> */}
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,32 @@
 import React from 'react'
 import "./TrainCard.css"
 
+import { useNavigate} from 'react-router-dom';
+
 export default function TrainCard(props) {
+
+    const navigate = useNavigate();
+
+    const handleBookClick = () => {
+        navigate('/book', {
+        state: {
+                    train_name: props.train_name,
+                    train_number: props.train_number,
+                    train_date: props.train_date,
+                    from_station_name : props.from_station_name,
+                    from : props.from,
+                    from_std : props.from_std,
+                    distance: props.distance,
+                    duration: props.duration,
+                    date: props.train_date,
+                    class_type: props.class_type,
+                    to_station_name: props.to_station_name,
+                    to : props.to,
+                    to_sta: props.to_sta
+
+        } // Pass your props as state
+        });
+    };
   return (
     <div className='train-card' key={props.index}>
         <div className='train-card-header'>
@@ -43,10 +68,12 @@ export default function TrainCard(props) {
                     ))
                 }
             </div>
+            
             <div className='book-ticket-now'>
-                <button className='book-this-train'>Book</button>
+                <button className='book-this-train' onClick={handleBookClick}>Book</button>
             </div>
         </div>
     </div>
   )
 }
+

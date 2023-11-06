@@ -17,7 +17,7 @@ function SearchTrain() {
       dateOfJourney: '2023-12-07'
     },
     headers: {
-      'X-RapidAPI-Key': 'c39fbf7a14msh8700b8453c1138fp15a705jsna84911a7263f',
+      'X-RapidAPI-Key': '96234e7a87mshc003e9f23b0d40cp1f4542jsnb2f308e265fe',
       'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
     }
   };
