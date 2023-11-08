@@ -1,0 +1,70 @@
+.login-page{
+    position: absolute;
+    width: 100vw;
+    overflow-x:hidden;
+    background-color: aliceblue;
+}
+
+.user{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-card{
+    height: 400px;
+    width: 700px;
+    border-radius: 12px;
+    display: flex;
+}
+.user-card-card{
+    flex:1;
+}
+.user-card-container{
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.admin{
+    height:50vh;
+    background-color:beige;
+
+}
+
+.circle{
+    z-index: 2;
+    border-radius:50%;
+    position: absolute;
+    height: 80vw;
+    width: 80vw;
+    transition: all;
+    transition-duration: 1s;
+    top:-50%;
+    background-color: cadetblue;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.login-img{
+    z-index: 3;
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    transition: all;
+    transition-duration: 1s;
+
+}
+.login-img1{
+    top:10%;
+}
+.login-img2{
+    top:10%;
+    right:0;
+}
+.circle-img{
+    height: 100%;
+    width:100%;
+}

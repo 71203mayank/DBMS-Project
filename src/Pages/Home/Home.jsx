@@ -19,7 +19,7 @@ export default function Home() {
                     </div>
                     
                 </div>
-                <Link to='/search' className='search-train'>
+                <Link to='/user/search' className='search-train'>
                         <button className='search-train-button hover:text-teal-500 hover:bg-white' >
                             Search Trains
                         </button>

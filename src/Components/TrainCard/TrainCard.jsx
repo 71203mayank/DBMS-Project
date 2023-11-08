@@ -8,7 +8,7 @@ export default function TrainCard(props) {
     const navigate = useNavigate();
 
     const handleBookClick = () => {
-        navigate('/book', {
+        navigate('/user/book', {
         state: {
                     train_name: props.train_name,
                     train_number: props.train_number,

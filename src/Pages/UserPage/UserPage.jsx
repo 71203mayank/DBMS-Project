@@ -37,14 +37,14 @@ const UserPage = () => {
             </button>
           </div>
           <div className="lg:flex space-x-6 hidden">
-            <Link to="/" className="text-white">
+            <Link to="/user" className="text-white">
               Home
             </Link>
-            <Link to="/search" className="text-white">
+            <Link to="/user/search" className="text-white">
               Search
             </Link>
-            <Link to="/book" className="text-white">
-              Book
+            <Link to="/user/history" className="text-white">
+              Ticket History
             </Link>
           </div>
         </div>
@@ -53,7 +53,7 @@ const UserPage = () => {
         <div className="lg:hidden absolute top-16 left-0 right-0 p-4 bg-blue-500 z-20">
           <div className="block mb-2">
             <Link
-              to="/"
+              to="/user"
               className="text-white"
               onClick={toggleMenu}
             >
@@ -62,7 +62,7 @@ const UserPage = () => {
           </div>
           <div className="block mb-2">
             <Link
-              to="/search"
+              to="/user/search"
               className="text-white"
               onClick={toggleMenu}
             >
@@ -71,20 +71,16 @@ const UserPage = () => {
           </div>
           <div className="block">
             <Link
-              to="/book"
+              to="/user/history"
               className="text-white"
               onClick={toggleMenu}
             >
-              Book
+              Ticket History
             </Link>
           </div>
         </div>
       )}
         <Outlet /> {/* Render child routes here */}
-      {/* <div className="lg:block">
-        <div className="container mx-auto p-4">
-        </div>
-      </div> */}
     </div>
   );
 };
