@@ -1,0 +1,18 @@
+.user-card{
+    /* margin-block: 4px; */
+    display:flex;
+    /* justify-content: space-between ; */
+    padding: 12px;
+    border: 1px solid #BCBCBC;
+}
+
+.user-card-id{
+    flex: 1;
+}
+
+/* .user-card-entry{
+    border:1px solid black;
+} */
+.user-card-name, .user-card-phone, .user-card-mail{
+    flex:4;
+}

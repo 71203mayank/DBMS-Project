@@ -1,0 +1,27 @@
+.mg-creations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mg-creations-container{
+
+    /* border: 1px solid aliceblue; */
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* font-size:16px; */
+    font-weight: 600;
+    color:#3D3D3D;
+
+    padding-inline: 32px;
+    padding-block: 16px;
+    border-radius: 24px 24px 0 0;
+}
+
+.mg-link{
+    color:cadetblue;
+}

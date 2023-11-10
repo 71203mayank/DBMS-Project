@@ -1,0 +1,23 @@
+.user-list{
+    margin-top: 55px;
+    padding: 12px;
+}
+
+.user-list-top{
+    display:flex;
+    padding: 12px;
+    background-color: #BCBCBC;
+    border: 1px solid #BCBCBC;
+}
+/* .user-list-entry{
+    border:1px solid black;
+} */
+.user-list-id{
+    flex: 1;
+}
+.user-list-name, .user-list-phone, .user-list-mail{
+    flex:4;
+}
+.user-list-view-ticket{
+    visibility: hidden;
+}

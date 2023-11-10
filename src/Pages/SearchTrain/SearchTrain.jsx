@@ -8,16 +8,36 @@ function SearchTrain() {
   const [inputText2, setInputText2] = useState('');
   const [trainDetails, setTrainDetails] = useState([]);
 
+  // const [inputDate, setInputDate] = useState('');
+  const [formattedDate, setFormattedDate] = useState('');
+
+  const handleFormatDate = (event) => {
+    const inputDate = event.target.value;
+
+    // Convert the input date to a JavaScript Date object
+    const inputDateObject = new Date(inputDate);
+
+    // Check if the input is a valid date
+    if (!isNaN(inputDateObject.getTime())) {
+      // Format the date as YYYY-MM-DD
+      const formattedDate = inputDateObject.toISOString().slice(0, 10);
+      setFormattedDate(formattedDate);
+    } else {
+      // Handle invalid date input
+      setFormattedDate('Invalid Date');
+    }
+  };
+
   const options = {
     method: 'GET',
     url: 'https://irctc1.p.rapidapi.com/api/v3/trainBetweenStations',
     params: {
       fromStationCode: inputText1,
       toStationCode: inputText2,
-      dateOfJourney: '2023-12-07'
+      dateOfJourney: formattedDate
     },
     headers: {
-      'X-RapidAPI-Key': '96234e7a87mshc003e9f23b0d40cp1f4542jsnb2f308e265fe',
+      'X-RapidAPI-Key': '6dc4b0b0c0msh54177f4a790f4cbp1ed733jsnf4180177dff5',
       'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
     }
   };
@@ -25,6 +45,20 @@ function SearchTrain() {
   const handleSubmit = () => {
     console.log('Input 1:', inputText1);
     console.log('Input 2:', inputText2);
+    console.log(formattedDate);
+
+    // const inputDateObject = new Date(inputDate);
+
+    // // Check if the input is a valid date
+    // if (!isNaN(inputDateObject.getTime())) {
+    //   // Format the date as YYYY-MM-DD
+    //   const formattedDate = inputDateObject.toISOString().slice(0, 10);
+    //   setFormattedDate(formattedDate);
+    // } else {
+    //   // Handle invalid date input
+    //   setFormattedDate('Invalid Date');
+    // }
+
 
     axios
   .request(options)
@@ -76,7 +110,7 @@ function SearchTrain() {
               name='journey-date'
               className='search-train-date'
               type="date"
-              min="yyyy-mm-dd"
+              onChange={handleFormatDate}
             />
           </div>
           <div>

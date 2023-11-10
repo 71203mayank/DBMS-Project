@@ -8,28 +8,77 @@
 .user{
     height:100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    /* margin-inline:5vw; */
 }
-.user-card{
+/* .user-card{
     height: 400px;
     width: 700px;
     border-radius: 12px;
     display: flex;
-}
+} */
 .user-card-card{
-    flex:1;
+    /* border:1px solid black; */
+    background-color: white;
+    padding-inline: 16px;
+    padding-block:24px ;
+    border-radius: 20px;
+    /* flex:1; */
 }
-.user-card-container{
+/* .user-card-container{
     height:100%;
     display: flex;
     justify-content:center;
     align-items: center;
+} */
+
+.user-input-container{
+    padding-block: 8px;
+    color:#3D3D3D;
+}
+.user-input-container input{
+    width:250px;
+    background-color:rgb(220, 237, 252);
+    /* border: 1.5px solid #D9D9D9; */
+    padding:2px 2px 2px 2px;
+    border-radius: 5px;
+}
+.user-button-container{
+    display: flex;
+    justify-content: center;
+}
+.user-button{
+    font-weight: 600;
+    /* border:1px solid black; */
+    padding-inline:16px ;
+    padding-block: 4px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    color:white;
+    transition-duration: 0.5s;
+}
+.user-button:hover{
+    scale:1.1;
+}
+.login-switch{
+    width:max-content;
+}
+.login-switch-link{
+    color:cadetblue;
+}
+.login-switch-link:hover{
+    cursor: pointer;
 }
 .admin{
     height:50vh;
-    background-color:beige;
+    background-color:#587489;
+    /* background-color:#9FABBF; */
+    /* background-color:#E5C082; */
 
+}
+.admin-input{
+    color:#3D3D3D
 }
 
 .circle{
@@ -38,9 +87,12 @@
     position: absolute;
     height: 80vw;
     width: 80vw;
+    /* height: 100vh;
+    width: 100vh; */
     transition: all;
     transition-duration: 1s;
-    top:-50%;
+    /* top:-50%; */
+    bottom:50vh;
     background-color: cadetblue;
 
     display: flex;
@@ -67,4 +119,22 @@
 .circle-img{
     height: 100%;
     width:100%;
+}
+
+.admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.admin-top{
+    color: aliceblue;
+    margin-inline:2vw;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-title{
+    color: aliceblue;
+    font-size: 32px;
+    font-weight: 600;
 }

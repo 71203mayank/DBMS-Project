@@ -70,13 +70,16 @@
 // }
 
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import {useLocation } from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
+
 import "./BookTrain.css";
 import BookTrainCard from '../../Components/BookTrainCard/BookTrainCard';
 import PassengerCard from '../../Components/PassengerCard/PassengerCard';
 
 export default function BookTrain() {
     const location = useLocation();
+    const navigate = useNavigate();
     const {
         train_name,
         train_number,
@@ -95,6 +98,8 @@ export default function BookTrain() {
 
     const [passengerCount, setPassengerCount] = useState(1);
     const [passengerInfo, setPassengerInfo] = useState([]);
+    const [mobileNumber, setMobileNumber] = useState('');
+    const [selectedClass, setSelectedClass] = useState('');
 
     const handlePassengerCountChange = (e) => {
         const count = Number(e.target.value);
@@ -125,11 +130,15 @@ export default function BookTrain() {
             to_station_name: to_station_name,
             to: to,
             to_sta: to_sta,
-            passengers: passengerInfo
+            passengers: passengerInfo,
+            mobile:mobileNumber,
+            class:selectedClass
         };
 
-        console.log(passengerInfo);
+        // console.log(passengerInfo);
         console.log(bookingData);
+        navigate('/user/history');
+        // <navigate to='/user/history'/>
     }
 
     const generatePassengerCards = () => {
@@ -169,11 +178,11 @@ export default function BookTrain() {
                     <div>
                         <label className='metadata-label'>Mobile :</label>
                         <input className='metadata-default' value='91' disabled></input>
-                        <input className='metadata-mobile-number metadata-input' type='text' required></input>
+                        <input className='metadata-mobile-number metadata-input' type='text' required onChange={(e) => setMobileNumber(e.target.value)}></input>
                     </div>
                     <div>
                         <label className='metadata-label'>Class :</label>
-                        <select className='metadata-input metadata-class'>
+                        <select className='metadata-input metadata-class' onChange={(e) => setSelectedClass(e.target.value)}>
                             {class_type.map((cls,index)=>(
                                 <option key={index}>{cls}</option>
                             ))}
@@ -196,7 +205,8 @@ export default function BookTrain() {
             </div>
             <div className='book-train-confirm'>
                 <button onClick={handleBookTicket}>Book Ticket</button>
-                <button>Cancel</button>
+
+                <Link to='/user/book'><button>Cancel</button></Link>
             </div>
         </div>
     );

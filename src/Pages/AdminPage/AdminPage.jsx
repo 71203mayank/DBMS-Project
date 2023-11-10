@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react'
 import { Link, Outlet } from 'react-router-dom';
 
-const UserPage = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
 
+export default function AdminPage() {
+        const [isMenuOpen, setMenuOpen] = useState(false);
+      
+        const toggleMenu = () => {
+          setMenuOpen(!isMenuOpen);
+      };
   return (
     <div>
       <nav className="bg-blue-500 p-4 fixed top-0 left-0 right-0 z-10">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/user" className="text-white font-semibold text-xl">
+          <Link to="/admin" className="text-white font-semibold text-xl">
             ChukChuk.com
           </Link>
           <div className="lg:hidden relative z-10">
@@ -37,15 +38,15 @@ const UserPage = () => {
             </button>
           </div>
           <div className="lg:flex space-x-6 hidden">
-            <Link to="/user" className="text-white">
-              Home
+            <Link to="/admin/users" className="text-white">
+              Users
             </Link>
-            <Link to="/user/search" className="text-white">
+            {/* <Link to="/user/search" className="text-white">
               Search
             </Link>
             <Link to="/user/history" className="text-white">
               Ticket History
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
@@ -53,14 +54,14 @@ const UserPage = () => {
         <div className="lg:hidden absolute top-16 left-0 right-0 p-4 bg-blue-500 z-20">
           <div className="block mb-2">
             <Link
-              to="/user"
+              to="/admin/users"
               className="text-white"
               onClick={toggleMenu}
             >
-              Home
+              Users
             </Link>
           </div>
-          <div className="block mb-2">
+          {/* <div className="block mb-2">
             <Link
               to="/user/search"
               className="text-white"
@@ -68,8 +69,8 @@ const UserPage = () => {
             >
               Search
             </Link>
-          </div>
-          <div className="block">
+          </div> */}
+          {/* <div className="block">
             <Link
               to="/user/history"
               className="text-white"
@@ -77,12 +78,10 @@ const UserPage = () => {
             >
               Ticket History
             </Link>
-          </div>
+          </div> */}
         </div>
       )}
         <Outlet /> {/* Render child routes here */}
     </div>
-  );
-};
-
-export default UserPage;
+  )
+}
