@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <!-- Add your stylesheet     here -->
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }} <br>
+            {{ form.username(size=20, class_='some-class') }} <br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.email.label }} <br>
+            {{ form.email(size=20, class_='some-class') }} <br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.password.label }} <br>
+            {{ form.password(size=20, class_='some-class') }} <br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.confirm_password.label }} <br>
+            {{ form.confirm_password(size=20, class_='some-class') }} <br>
+            {% for error in form.confirm_password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.submit(class_='btn btn-primary') }}
+        </div>
+    </form>
+</body>
+</html>

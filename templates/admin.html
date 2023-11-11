@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Add any other required meta tags and stylesheets here -->
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <!-- Add more columns for additional attributes if needed -->
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <!-- Add more cells for additional attributes if needed -->
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- You can add more functionality such as editing or deleting users here -->
+</body>
+</html>
