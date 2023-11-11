@@ -21,7 +21,7 @@ class User(db.Model):
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(500), nullable=False)
     tickets = db.relationship('Ticket', backref='user', lazy=True)
-    admin_id = db.Column(db.Integer, db.ForeignKey('admin.id'), nullable=False)
+    admin_id = db.Column(db.Integer, db.ForeignKey('admin.id'), nullable=False, default=1)
 
     def __repr__(self):
         return f"User('{self.username}')"
@@ -81,7 +81,7 @@ def signup():
         return "Signup page"
     else:
         data = request.json
-        hashed_password = generate_password_hash(data['password'], method='sha256')
+        hashed_password = data['password']
         new_user = User(username=data['username'], email=data['email'], password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
@@ -92,9 +92,11 @@ def signup():
 def login():
     data = request.json
     user = User.query.filter_by(username=data['username']).first()
-    if user and check_password_hash(user.password, data['password']):
+    if user and user.password == data['password']:
         return jsonify({'message': 'Login successful', 'user_id': user.id})
     return jsonify({'message': 'Invalid username or password'}), 401
+
+
 
 # @app.route("/")
 # def home():
