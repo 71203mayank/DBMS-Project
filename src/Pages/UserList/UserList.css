@@ -12,12 +12,12 @@
 /* .user-list-entry{
     border:1px solid black;
 } */
-.user-list-id{
+.user-list-id,.user-list-view-ticket, .user-list-delete{
     flex: 1;
 }
-.user-list-name, .user-list-phone, .user-list-mail{
+.user-list-name, .user-list-mail{
     flex:4;
 }
-.user-list-view-ticket{
+.user-list-view-ticket, .user-list-delete{
     visibility: hidden;
 }

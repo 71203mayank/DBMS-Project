@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Home.css";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
-
+    const {id} = useParams();
     return (
         <div className='home-page'>
             <div className='home'>
@@ -19,7 +19,7 @@ export default function Home() {
                     </div>
                     
                 </div>
-                <Link to='/user/search' className='search-train'>
+                <Link to={`/user/${id}/search`} className='search-train'>
                         <button className='search-train-button hover:text-teal-500 hover:bg-white' >
                             Search Trains
                         </button>

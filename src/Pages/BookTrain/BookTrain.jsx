@@ -72,6 +72,7 @@
 import React, { useState } from 'react';
 import {useLocation } from 'react-router-dom';
 import { Link,useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 import "./BookTrain.css";
 import BookTrainCard from '../../Components/BookTrainCard/BookTrainCard';
@@ -93,7 +94,8 @@ export default function BookTrain() {
         class_type,
         to_station_name,
         to,
-        to_sta
+        to_sta,
+        user_id
     } = location.state;
 
     const [passengerCount, setPassengerCount] = useState(1);
@@ -115,29 +117,49 @@ export default function BookTrain() {
         setPassengerInfo(updatedPassengerInfo);
     }
 
-    const handleBookTicket = () => {
+    // function generatePNR() {
+    //     const timestamp = new Date().getTime(); // Current timestamp
+    //     const randomDigits = Math.floor(Math.random() * 10000000000); // Random 10-digit number
+      
+    //     const pnr = `${timestamp}${randomDigits}`.slice(0, 10); // Combine and take the first 10 digits
+      
+    //     return pnr;
+    // }
+
+    const handleBookTicket = async() => {
         // Log the array of passengers
+        // const pnr = generatePNR();
         const bookingData = {
             train_name: train_name,
             train_number: train_number,
             train_date: train_date,
-            from_station_name: from_station_name,
-            from: from,
-            from_std: from_std,
+            from_station: from_station_name,
+            from_station_code: from,
+            dept_time: from_std,
             distance: distance,
-            duration: duration,
-            date: date,
-            to_station_name: to_station_name,
-            to: to,
-            to_sta: to_sta,
+            time: duration,
+            class_booked:selectedClass,
+            // date: date,
+            to_station: to_station_name,
+            to_station_code: to,
+            arr_time: to_sta,
             passengers: passengerInfo,
             mobile:mobileNumber,
-            class:selectedClass
+            user_id: user_id
         };
 
         // console.log(passengerInfo);
         console.log(bookingData);
-        navigate('/user/history');
+
+        try{
+            const response = await axios.post('http://192.168.1.46:5000/book',bookingData);
+            console.log(response);
+            navigate(`/user/${user_id}/history`);
+
+        }
+        catch (error){
+            console.error('Booking error', error);
+        }
         // <navigate to='/user/history'/>
     }
 

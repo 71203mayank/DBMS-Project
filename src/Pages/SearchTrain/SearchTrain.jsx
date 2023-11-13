@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import "./SearchTrain.css"
 import axios from 'axios';
+
+
 import TrainCard from '../../Components/TrainCard/TrainCard';
 
 function SearchTrain() {
+  const {id} = useParams();
   const [inputText1, setInputText1] = useState('');
   const [inputText2, setInputText2] = useState('');
   const [trainDetails, setTrainDetails] = useState([]);
@@ -37,7 +41,7 @@ function SearchTrain() {
       dateOfJourney: formattedDate
     },
     headers: {
-      'X-RapidAPI-Key': '6dc4b0b0c0msh54177f4a790f4cbp1ed733jsnf4180177dff5',
+      'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
       'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
     }
   };
@@ -104,7 +108,7 @@ function SearchTrain() {
               onChange={(e) => setInputText2(e.target.value)}
             />
           </div>
-          <label for='journey-date'>Date of Journery * </label>
+          <label for='journey-date'>Date of Journey * </label>
           <div>
             <input
               name='journey-date'
@@ -140,6 +144,7 @@ function SearchTrain() {
             to_std = {train.to_std}
 
             class_type = {train.class_type}
+            user_id = {id}
           />
         )
         )

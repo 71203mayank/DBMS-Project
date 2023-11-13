@@ -41,12 +41,9 @@ export default function AdminPage() {
             <Link to="/admin/users" className="text-white">
               Users
             </Link>
-            {/* <Link to="/user/search" className="text-white">
-              Search
+            <Link to="/" className="text-white">
+              Logout
             </Link>
-            <Link to="/user/history" className="text-white">
-              Ticket History
-            </Link> */}
           </div>
         </div>
       </nav>
@@ -61,24 +58,15 @@ export default function AdminPage() {
               Users
             </Link>
           </div>
-          {/* <div className="block mb-2">
+          <div className="block mb-2">
             <Link
-              to="/user/search"
+              to="/"
               className="text-white"
               onClick={toggleMenu}
             >
-              Search
+              Logout
             </Link>
-          </div> */}
-          {/* <div className="block">
-            <Link
-              to="/user/history"
-              className="text-white"
-              onClick={toggleMenu}
-            >
-              Ticket History
-            </Link>
-          </div> */}
+          </div>
         </div>
       )}
         <Outlet /> {/* Render child routes here */}

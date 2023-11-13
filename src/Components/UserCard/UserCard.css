@@ -6,13 +6,13 @@
     border: 1px solid #BCBCBC;
 }
 
-.user-card-id{
+.user-card-id, .user-card-delete, .user-card-history{
     flex: 1;
 }
 
 /* .user-card-entry{
     border:1px solid black;
 } */
-.user-card-name, .user-card-phone, .user-card-mail{
+.user-card-name, .user-card-mail{
     flex:4;
 }

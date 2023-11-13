@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginPage/>}/>
-          <Route path='user' element={<UserPage/>}>
+          <Route path='user/:id' element={<UserPage/>}>
             <Route index element={<Home />} />
             <Route path='home' element={<Home/>}/>
             <Route path='search' element={<SearchTrain/>}/>
@@ -26,7 +26,7 @@ function App() {
           <Route path='admin' element={<AdminPage/>}>
             <Route index element={<UserList/>}/>
             <Route path='users' element={<UserList/>}/>
-            <Route path='history' element={<History/>} />
+            <Route path=':id/history' element={<History/>} />
           </Route>
         </Routes>
       </BrowserRouter>

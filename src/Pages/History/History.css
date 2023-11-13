@@ -1,3 +1,19 @@
 .history{
     margin-top: 60px;
 }
+
+.history-cancel{
+    border: 1px solid black;
+}
+.disabled{
+    cursor: no-drop;
+}
+.passenger-name{
+    flex:2;
+}
+.passenger-sex, .passenger-age{
+    flex:1;
+}
+/* button.disabled {
+    cursor: not-allowed;
+  } */

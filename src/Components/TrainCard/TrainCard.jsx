@@ -8,7 +8,7 @@ export default function TrainCard(props) {
     const navigate = useNavigate();
 
     const handleBookClick = () => {
-        navigate('/user/book', {
+        navigate(`/user/${props.user_id}/book`, {
         state: {
                     train_name: props.train_name,
                     train_number: props.train_number,
@@ -22,7 +22,8 @@ export default function TrainCard(props) {
                     class_type: props.class_type,
                     to_station_name: props.to_station_name,
                     to : props.to,
-                    to_sta: props.to_sta
+                    to_sta: props.to_sta,
+                    user_id: props.user_id
 
         } // Pass your props as state
         });

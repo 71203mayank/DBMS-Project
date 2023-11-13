@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 
 const UserPage = () => {
+  const {id} = useParams();
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -37,14 +38,17 @@ const UserPage = () => {
             </button>
           </div>
           <div className="lg:flex space-x-6 hidden">
-            <Link to="/user" className="text-white">
+            <Link to={`/user/${id}`} className="text-white">
               Home
             </Link>
-            <Link to="/user/search" className="text-white">
+            <Link to={`/user/${id}/search`} className="text-white">
               Search
             </Link>
-            <Link to="/user/history" className="text-white">
+            <Link to={`/user/${id}/history`} className="text-white">
               Ticket History
+            </Link>
+            <Link to={`/`} className="text-white">
+              Logout
             </Link>
           </div>
         </div>
@@ -53,7 +57,7 @@ const UserPage = () => {
         <div className="lg:hidden absolute top-16 left-0 right-0 p-4 bg-blue-500 z-20">
           <div className="block mb-2">
             <Link
-              to="/user"
+              to={`/user/${id}`}
               className="text-white"
               onClick={toggleMenu}
             >
@@ -62,7 +66,7 @@ const UserPage = () => {
           </div>
           <div className="block mb-2">
             <Link
-              to="/user/search"
+              to={`/user/${id}/search`}
               className="text-white"
               onClick={toggleMenu}
             >
@@ -71,11 +75,20 @@ const UserPage = () => {
           </div>
           <div className="block">
             <Link
-              to="/user/history"
+              to={`/user/${id}/history`}
               className="text-white"
               onClick={toggleMenu}
             >
               Ticket History
+            </Link>
+          </div>
+          <div className="block">
+            <Link
+              to={`/`}
+              className="text-white"
+              onClick={toggleMenu}
+            >
+              Logout
             </Link>
           </div>
         </div>
