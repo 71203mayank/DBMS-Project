@@ -9,9 +9,12 @@ const UserPage = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const isHomePage = window.location.pathname === `/user/${id}`;
+
+
   return (
     <div>
-      <nav className="bg-blue-500 p-4 fixed top-0 left-0 right-0 z-10">
+      <nav className={`p-4 fixed top-0 left-0 right-0 z-10 ${isHomePage ? 'bg-transparent' : 'bg-blue-500'}`}>
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/user" className="text-white font-semibold text-xl">
             ChukChuk.com

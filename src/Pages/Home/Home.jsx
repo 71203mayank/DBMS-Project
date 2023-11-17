@@ -25,7 +25,7 @@ export default function Home() {
                         </button>
                 </Link>
             </div>
-            <div className='home-extra-one'>
+            {/* <div className='home-extra-one'>
                 <div className='other-features'>
                     <div className="feature">
                         <div className='new-offer'>COMING <br></br>SOON</div>
@@ -53,10 +53,10 @@ export default function Home() {
                         <div className='offer'>Flights</div>
                     </div>
                 </div>
-            </div>
-            <div className='home-extra-two'>
+            </div> */}
+            {/* <div className='home-extra-two'>
                  
-            </div>
+            </div> */}
         </div>
     )
 }

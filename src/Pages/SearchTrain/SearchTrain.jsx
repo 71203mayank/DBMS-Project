@@ -51,19 +51,6 @@ function SearchTrain() {
     console.log('Input 2:', inputText2);
     console.log(formattedDate);
 
-    // const inputDateObject = new Date(inputDate);
-
-    // // Check if the input is a valid date
-    // if (!isNaN(inputDateObject.getTime())) {
-    //   // Format the date as YYYY-MM-DD
-    //   const formattedDate = inputDateObject.toISOString().slice(0, 10);
-    //   setFormattedDate(formattedDate);
-    // } else {
-    //   // Handle invalid date input
-    //   setFormattedDate('Invalid Date');
-    // }
-
-
     axios
   .request(options)
   .then((response) => {
@@ -85,31 +72,31 @@ function SearchTrain() {
   return (
     <div className='search-trains' >
       <div className='search-form-container'>
-        <div>
-          <lable for='from-station'>From *</lable>
+        <div className='search-form' >
           <div className='search-train-input-contaner' >
+            <div>From *</div>
             <input
               className='search-train-input'
               name = 'from-station'
               type="text"
-              placeholder="Input 1"
+              // placeholder="Input 1"
               value={inputText1}
               onChange={(e) => setInputText1(e.target.value)}
             />
           </div>
-          <label for='to-station'>To *</label>
           <div className='search-train-input-contaner'>
+            <div>To *</div>
             <input
               name='to-station'
               className='search-train-input'
               type="text"
-              placeholder="Input 2"
+              // placeholder="Input 2"
               value={inputText2}
               onChange={(e) => setInputText2(e.target.value)}
             />
           </div>
-          <label for='journey-date'>Date of Journey * </label>
-          <div>
+          <div className='search-train-input-contaner'>
+            <div>Date of journey *</div>
             <input
               name='journey-date'
               className='search-train-date'
@@ -117,12 +104,13 @@ function SearchTrain() {
               onChange={handleFormatDate}
             />
           </div>
-          <div>
-            <button onClick={handleSubmit}>Submit</button>
+          <div className='search-button-container'> 
+            <button className='search-button' onClick={handleSubmit}>Search</button>
           </div>
         </div>
       </div>
       <div className='searched-train-container'>
+
         {trainDetails.map((train, index)=>(
           <TrainCard
             index = {index} 

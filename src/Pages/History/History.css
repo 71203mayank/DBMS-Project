@@ -2,11 +2,18 @@
     margin-top: 60px;
 }
 
-.history-cancel{
-    border: 1px solid black;
+.history-cancel-button.disabled{
+
+    color:#3d3d3d;
+    background-color: rgb(235,235,228);
+    border-color: #3d3d3d;
 }
 .disabled{
     cursor: no-drop;
+}
+
+.history-meta-detail{
+    color:#3d3d3d;
 }
 .passenger-name{
     flex:2;
@@ -17,3 +24,43 @@
 /* button.disabled {
     cursor: not-allowed;
   } */
+
+.history-passenger-detail-container{
+color: #3d3d3d;
+}
+.history-passenger-name{
+    flex:2;
+}
+.history-passenger-sex, .history-passenger-age{
+    flex:1;
+}
+
+
+.history-cancel-button-container{
+    /* border: 1px solid #3d3d3d; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.history-cancel-button{
+    padding-inline:10px;
+    padding-block:5px;
+    /* border: 1px solid black; */
+    /* color: #575757;
+    border: 2px solid #575757; */
+
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-block: 10px;
+    margin-inline: 5px;
+    font-weight: 600;
+    transition: all;
+    transition-duration: 0.5s;
+}
+/* .history-cancel-button:hover{
+    scale: 1.05;
+} */
+.history-cancel-button:not(.disabled):hover {
+    scale: 1.05;
+}

@@ -8,7 +8,7 @@ export default function UserList() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get('http://192.168.1.46:5000/show')
+    axios.get('http://192.168.1.49:5000/show')
       .then(response => {
         setUser(response.data.users);
         console.log(response.data.users);
@@ -23,7 +23,7 @@ export default function UserList() {
     console.log(userid)
 
     try{
-        const response = await axios.delete(`http://192.168.1.46:5000/delete?user_id=${userid}`);
+        const response = await axios.delete(`http://192.168.1.49:5000/delete?user_id=${userid}`);
         console.log(response);
         window.location.reload();
     }
@@ -43,18 +43,17 @@ export default function UserList() {
             <div className='user-list-view-ticket'>View Tickets</div>
             {/* <button>View Tickets</button> */}
         </div>
-        {user.map((user,index)=>( 
-          <UserCard
-            key = {index}
-            userid = {user.id}
-            username = {user.username}
-            usermail = {user.email}
-            onDelete = {onDeleteHandle}
-           />
-        ))}
-        {/* <UserCard/>
-        <UserCard/>
-        <UserCard/> */}
+        <div className='user-list-passenger-list'>
+          {user.map((user,index)=>( 
+            <UserCard
+              key = {index}
+              userid = {user.id}
+              username = {user.username}
+              usermail = {user.email}
+              onDelete = {onDeleteHandle}
+            />
+          ))}
+        </div>
     </div>
   )
 }

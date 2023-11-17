@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+// import moment from 'moment-timezone';
 import moment from 'moment';
+import 'moment-timezone'
 import "./History.css"
 import BookTrainCard from '../../Components/BookTrainCard/BookTrainCard'
 
@@ -14,7 +16,7 @@ export default function History() {
         const fetchTickets = async () => {
             try {
                 console.log(id);
-                const response = await axios.get(`http://192.168.1.46:5000/history?user_id=${id}`);
+                const response = await axios.get(`http://192.168.1.49:5000/history?user_id=${id}`);
                 console.log(response.data);
                 setTickets(response.data.tickets); // Assuming setTickets is a state setter from useState
             } catch (err) {
@@ -30,7 +32,7 @@ export default function History() {
         try{
             // const ticket_id = 2;
             console.log(ticket_id);
-            const response = await axios.delete(`http://192.168.1.46:5000/cancel?ticket_id=${ticket_id}`);
+            const response = await axios.delete(`http://192.168.1.49:5000/cancel?ticket_id=${ticket_id}`);
             console.log(response);
             window.location.reload();
         }
@@ -41,15 +43,31 @@ export default function History() {
         // console.log("cancled clicke");
     }
 
+    // const isTicketInPast = (ticket) => {
+    //     // Check if the route is /admin/:userid/history
+    //     const isAdminHistoryRoute = window.location.pathname.includes(`/admin/${id}/history`);
+    //     if (isAdminHistoryRoute) {
+    //         return false;
+    //     }
+
+
+    //     const ticketDateTime = moment.tz(`${ticket.train_date} ${ticket.dept_time}`, 'DD-MM-YYYY HH:mm', "Asia/Kolkata");
+    //     const currentDateTime = moment().tz("Asia/Kolkata");
+    //     return ticketDateTime.isBefore(currentDateTime);
+    // }
+
     const isTicketInPast = (ticket) => {
-        // const ticketDateTime = new Date(`${ticket.train_date} ${ticket.dept_time}`);
-        const ticketDateTime = moment(`${ticket.train_date} ${ticket.dept_time}`, 'YYYY-MM-DD HH:mm');
-        const currentDateTime = new Date();
-        // console.log(ticketDateTime);
-        // console.log(currentDateTime);
-        return ticketDateTime < currentDateTime;
-    }
-    ;
+        // Check if the route is /admin/:userid/history
+        const isAdminHistoryRoute = window.location.pathname.includes(`/admin/${id}/history`);
+        if (isAdminHistoryRoute) {
+            return false;
+        }
+    
+        const ticketDateTime = moment.tz(`${ticket.train_date} ${ticket.dept_time}`, 'DD-MM-YYYY HH:mm', 'Asia/Kolkata');
+        const currentDateTime = moment().tz('Asia/Kolkata');
+        return ticketDateTime.isBefore(currentDateTime);
+    };
+    
   return (
     <div className='history'>
         <div className='w-11/12 flex-col m-auto'>
@@ -73,7 +91,7 @@ export default function History() {
                     <div className='history-meta-detail flex justify-between p-3'>
 
                         <div className='pnr'>
-                            PNR: {ticket.id}
+                            Ticket ID: {ticket.id}
                         </div>
                         <div className='history-class'>
                             {ticket.class_booked}
@@ -85,27 +103,35 @@ export default function History() {
                     <div className='flex justify-between'>
                         <div className='w-1/2'>
                             { ticket.passengers.map((passenger,indx)=>(
-                                <div key ={indx} className='flex justify-between w-full pl-3'>
-                                <div className='passenger-name'>
+                                <div key ={indx} className='history-passenger-detail-container flex justify-between w-full pl-3'>
+                                <div className='history-passenger-detail history-passenger-name'>
                                     {passenger.passenger_name}
                                 </div>
-                                <div className='passenger-sex'>
+                                <div className='history-passenger-detail history-passenger-sex'>
                                     {passenger.passenger_sex}
                                 </div>
-                                <div className='passenger-age'>
+                                <div className='history-passenger-detail history-passenger-age'>
                                     {passenger.passenger_age}
                                     
                                 </div>
                             </div>
                             ))}
                         </div>
-                        <div className='w-1/4'>
-                            <button className={`history-cancel ${isTicketInPast(ticket) ? 'disabled' : ''}`} 
+                        <div className='history-cancel-button-container w-1/4'>
+                            {/* <button className={`history-cancel-button ${isTicketInPast(ticket) ? 'disabled' : ''}`} 
                             onClick={() => handleOnSubmit(ticket.id)} 
                             disabled={isTicketInPast(ticket)}
                             >
                                 Cancel
+                            </button> */}
+                            <button
+                                className={`history-cancel-button ${isTicketInPast(ticket) ? 'disabled' : ''}`}
+                                onClick={() => handleOnSubmit(ticket.id)}
+                                disabled={isTicketInPast(ticket)}
+                            >
+                                Cancel
                             </button>
+
                         </div>
                     </div>
                 </div>

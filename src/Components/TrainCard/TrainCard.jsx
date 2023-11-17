@@ -49,7 +49,7 @@ export default function TrainCard(props) {
             </div>
             <div className='train-card-dist'>
                 <div>{props.distance} KM</div>
-                <div> double-arrow-img</div>
+                {/* <div> double-arrow-img</div> */}
                 <div>{props.duration} Hrs</div>
             </div>
             <div className='train-card-to train-card-station'>

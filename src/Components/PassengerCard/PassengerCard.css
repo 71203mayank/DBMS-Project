@@ -1,6 +1,7 @@
 .passenger-card{
     width: 100%;
-    border:1px solid black;
+    border:1px solid #3d3d3d;
+    color: #3d3d3d;
     border-radius: 12px;
     margin-block: 5px;
     padding:12px;
@@ -10,17 +11,27 @@
 
 .passenger-input{
     padding:5px;
-    border: 2px solid black;
+    /* border: 1.5px solid #9f9f9f; */
     border-radius: 5px;
+}
+.passenger-field{
+    display: flex;
+    align-items: center;
 }
 .passenger-name{
     width:clamp(200px, 25vw, 500px);
+    background-color: rgb(220, 237, 252);
+    /* color:#5f9ea0; */
+    /* display: flex; */
 }
 .passenger-sex{
     width:150px;
+    /* display: flex; */
 }
 .passenger-age{
     width:100px;
+    /* display: flex; */
+    background-color: rgb(220, 237, 252);
 }
 .passenger-label{
     padding-right: 5px;

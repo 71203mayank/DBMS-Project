@@ -2,37 +2,66 @@
     width:80%;
     margin-inline: 10%;
     margin-block:10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    background-color: white;
+    /* background-color: aliceblue; */
 }
 .train-card-header{
     display: flex;
     justify-content: space-between;
     padding-block:10px;
-    font-size:24px;
-    border: 1px solid black;
+    font-size:20px;
+    /* border: 1px solid black; */
+    color: white;
+    background-color: cadetblue;
+    border-radius: 15px 15px 0 0;
     padding-inline: 10px;
 }
 
 .train-card-body{
     display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color:#3D3D3D;
 }
-.train-card-station{
-    flex:1;
-    /* text-align: center; */
-}
-.train-card-dist{
+
+/* .train-card-dist{
     flex:1;
     text-align: center;
-}
+} */
 
 .train-card-classes{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 .available-class{
     display: flex;
 }
 .train-card-class{
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin-block:5px;
+    margin-inline:3px;
+    border-radius: 5px;
+    color: white;
+    background-color: cadetblue;
+}
+.book-this-train{
+    padding-block: 10px;
+    padding-inline: 20px;
+    /* border: 1px solid black; */
+    margin-block:5px;
+    margin-inline:3px;
+    border-radius: 5px;
+    color: white;
+    background-color: #24a0ed;
+    font-weight: 600;
+    /* background-color: cadetblue; */
+    transition: all;
+    transition-duration: 0.5s;
+}
+.book-this-train:hover{
+    scale:1.05;
 }

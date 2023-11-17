@@ -138,3 +138,20 @@
     font-size: 32px;
     font-weight: 600;
 }
+
+.login-title{
+    z-index: 5;
+    font-weight: 600;
+    font-size: 24px;
+    position: absolute;
+    margin-top:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: aliceblue;
+}
+.login-title-one{
+    left: 0;
+}
+.login-title-two{
+    right: 0;
+}

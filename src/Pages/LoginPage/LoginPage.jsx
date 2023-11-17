@@ -47,7 +47,7 @@ export default function LoginPage() {
     const handleSignup = async(e) =>{
         e.preventDefault();
         try{
-            const response = await axios.post("http://192.168.1.46:5000/signup",{email,username,password});
+            const response = await axios.post("http://192.168.1.49:5000/signup",{email,username,password});
             console.log(response);
             // navigate('/');
         }
@@ -60,7 +60,7 @@ export default function LoginPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://192.168.1.46:5000/login',{username, password});
+            const response = await axios.post('http://192.168.1.49:5000/login',{username, password});
             // Handle response...
             console.log(response.data);
             navigate(`/user/${response.data.user_id}`);
@@ -76,11 +76,7 @@ export default function LoginPage() {
             console.log(eemail);
             console.log(password);
 
-            // const credential = {
-            //     eemail : username,
-            //     password: password
-            // };
-            const response = await axios.get('http://192.168.1.46:5000/admin', {
+            const response = await axios.get('http://192.168.1.49:5000/admin', {
                 params: {
                     eemail: adminMail,
                     password: adminPwd
@@ -96,6 +92,12 @@ export default function LoginPage() {
 
   return (
     <div className='login-page'>
+        <div className='login-title login-title-one'>
+            ChukChuk.com
+        </div>
+        <div className='login-title login-title-two'>
+            ChukChuk.com
+        </div>
         <div className='login-img1 login-img' style={{ transform: `translateX(${traslateOne}vw)` }}>
             <img className='circle-img' src='./Assets/suitcase.png' alt='suitcase'></img>
         </div>
@@ -109,11 +111,6 @@ export default function LoginPage() {
                     <div className='user-card-card user-login'>
                         {/* <div className='user-card-container user-login-card'> */}
                             <form onSubmit={handleLogin}> 
-                                {/* <div className='user-input-container'>
-
-                                    <div>Username</div>
-                                    <input  name='username' type='text' value={username} onChange={(e)=>setusername(e.target.value)} ></input>
-                                </div> */}
                                 <div className='user-input-container'>
 
                                     <div>Username</div>
@@ -172,19 +169,19 @@ export default function LoginPage() {
                     <div className='team-members'>
                         <u>Project Members:</u>
                         <ul>
-                            <li>Sita</li>
+                            <li>Mayank Gupta</li>
                             <li>Hitesh G Reddy</li>
                             <li>Bhaskar Pal</li>
-                            <li>Mayank Gupta</li>
+                            <li>Sita</li>
                         </ul>
                     </div>
                     <div className='project-desc'>
                         <u>Project:</u>
                         <ul>
                             <li>About project</li>
-                            <li>SRS</li>
-                            <li>DDS</li>
                             <li>Source Code</li>
+                            <li>Database Design Document</li>
+                            <li>Software Requirements Specification</li>
                         </ul>
                     </div>
                     

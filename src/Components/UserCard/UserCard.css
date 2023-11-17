@@ -1,9 +1,13 @@
 .user-card{
     /* margin-block: 4px; */
     display:flex;
+    align-items: center;
     /* justify-content: space-between ; */
     padding: 12px;
-    border: 1px solid #BCBCBC;
+    color:#3d3d3d;
+    /* background-color: #f3f3f3; */
+    /* border: 1px solid #BCBCBC; */
+    /* border-radius: 12px; */
 }
 
 .user-card-id, .user-card-delete, .user-card-history{
@@ -15,4 +19,20 @@
 } */
 .user-card-name, .user-card-mail{
     flex:4;
+}
+
+.user-card-history-button{
+    padding-block: 5px;
+    padding-inline: 7px;
+    border-radius: 5px;
+    color: white;
+    background-color: #24a0ed;
+    border: 2px solid #24a0ed;
+}
+.user-card-delete-button{
+    padding-block: 5px;
+    padding-inline: 7px;
+    border-radius: 5px;
+    color: #575757;
+    border: 2px solid #575757;
 }

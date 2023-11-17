@@ -6,8 +6,10 @@
 .user-list-top{
     display:flex;
     padding: 12px;
-    background-color: #BCBCBC;
-    border: 1px solid #BCBCBC;
+    /* background-color: #BCBCBC; */
+    /* border: 1px solid #BCBCBC; */
+    background-color: cadetblue;
+    color: white;
 }
 /* .user-list-entry{
     border:1px solid black;
@@ -20,4 +22,11 @@
 }
 .user-list-view-ticket, .user-list-delete{
     visibility: hidden;
+}
+
+.user-list-passenger-list > div:nth-child(even){
+    background-color: #f3f3f3;
+}
+.user-list-passenger-list > div:nth-child(odd){
+    background-color: #ffffff;
 }
