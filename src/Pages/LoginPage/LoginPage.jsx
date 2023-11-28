@@ -47,7 +47,7 @@ export default function LoginPage() {
     const handleSignup = async(e) =>{
         e.preventDefault();
         try{
-            const response = await axios.post("http://192.168.1.49:5000/signup",{email,username,password});
+            const response = await axios.post("http://192.168.1.55:5000/signup",{email,username,password});
             console.log(response);
             // navigate('/');
         }
@@ -60,7 +60,7 @@ export default function LoginPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://192.168.1.49:5000/login',{username, password});
+            const response = await axios.post('http://192.168.1.55:5000/login',{username, password});
             // Handle response...
             console.log(response.data);
             navigate(`/user/${response.data.user_id}`);
@@ -76,7 +76,7 @@ export default function LoginPage() {
             console.log(eemail);
             console.log(password);
 
-            const response = await axios.get('http://192.168.1.49:5000/admin', {
+            const response = await axios.get('http://192.168.1.55:5000/admin', {
                 params: {
                     eemail: adminMail,
                     password: adminPwd
@@ -178,7 +178,7 @@ export default function LoginPage() {
                     <div className='project-desc'>
                         <u>Project:</u>
                         <ul>
-                            <li>About project</li>
+                            <li>About Project</li>
                             <li>Source Code</li>
                             <li>Database Design Document</li>
                             <li>Software Requirements Specification</li>

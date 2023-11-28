@@ -16,7 +16,7 @@ export default function History() {
         const fetchTickets = async () => {
             try {
                 console.log(id);
-                const response = await axios.get(`http://192.168.1.49:5000/history?user_id=${id}`);
+                const response = await axios.get(`http://192.168.1.55:5000/history?user_id=${id}`);
                 console.log(response.data);
                 setTickets(response.data.tickets); // Assuming setTickets is a state setter from useState
             } catch (err) {
@@ -32,7 +32,7 @@ export default function History() {
         try{
             // const ticket_id = 2;
             console.log(ticket_id);
-            const response = await axios.delete(`http://192.168.1.49:5000/cancel?ticket_id=${ticket_id}`);
+            const response = await axios.delete(`http://192.168.1.55:5000/cancel?ticket_id=${ticket_id}`);
             console.log(response);
             window.location.reload();
         }

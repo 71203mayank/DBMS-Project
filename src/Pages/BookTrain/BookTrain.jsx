@@ -72,7 +72,7 @@ export default function BookTrain() {
         console.log(bookingData);
 
         try{
-            const response = await axios.post('http://192.168.1.49:5000/book',bookingData);
+            const response = await axios.post('http://192.168.1.55:5000/book',bookingData);
             console.log(response);
             navigate(`/user/${user_id}/history`);
 

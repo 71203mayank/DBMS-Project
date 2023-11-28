@@ -15,7 +15,7 @@ export default function BookTrainCard(props) {
                     {props.from_station_name}, {props.from}
                 </div>
                 <div className='booked-std'>
-                    Dept: {props.from_std}
+                    Dep: {props.from_std}
                 </div>
             </div>
             <div className='travel-detail'>

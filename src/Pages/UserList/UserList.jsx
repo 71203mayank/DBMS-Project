@@ -8,7 +8,7 @@ export default function UserList() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get('http://192.168.1.49:5000/show')
+    axios.get('http://192.168.1.55:5000/show')
       .then(response => {
         setUser(response.data.users);
         console.log(response.data.users);
@@ -23,7 +23,7 @@ export default function UserList() {
     console.log(userid)
 
     try{
-        const response = await axios.delete(`http://192.168.1.49:5000/delete?user_id=${userid}`);
+        const response = await axios.delete(`http://192.168.1.55:5000/delete?user_id=${userid}`);
         console.log(response);
         window.location.reload();
     }

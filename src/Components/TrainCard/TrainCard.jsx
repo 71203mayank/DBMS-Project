@@ -44,7 +44,7 @@ export default function TrainCard(props) {
                     {props.from_station_name}, {props.from}
                 </div>
                 <div className='time'>
-                    Deptaure: {props.from_std} 
+                    Departure: {props.from_std} 
                 </div>
             </div>
             <div className='train-card-dist'>
