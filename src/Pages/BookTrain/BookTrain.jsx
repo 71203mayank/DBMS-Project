@@ -49,6 +49,15 @@ export default function BookTrain() {
     const handleBookTicket = async() => {
         // Log the array of passengers
         // const pnr = generatePNR();
+
+        const isValidMobile = /^\d{10}$/g.test(mobileNumber) && !mobileNumber.startsWith('0');
+
+        if (!isValidMobile) {
+            alert('Invalid mobile number.');
+            // You may also want to display an error message to the user
+            return;
+        }
+
         const bookingData = {
             train_name: train_name,
             train_number: train_number,
@@ -72,7 +81,7 @@ export default function BookTrain() {
         console.log(bookingData);
 
         try{
-            const response = await axios.post('http://192.168.1.55:5000/book',bookingData);
+            const response = await axios.post('http://127.0.0.1:5000/book',bookingData);
             console.log(response);
             navigate(`/user/${user_id}/history`);
 

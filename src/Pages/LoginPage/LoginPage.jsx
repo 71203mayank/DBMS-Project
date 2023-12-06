@@ -47,7 +47,7 @@ export default function LoginPage() {
     const handleSignup = async(e) =>{
         e.preventDefault();
         try{
-            const response = await axios.post("http://192.168.1.55:5000/signup",{email,username,password});
+            const response = await axios.post("http://127.0.0.1:5000/signup",{email,username,password});
             console.log(response);
             // navigate('/');
         }
@@ -60,12 +60,13 @@ export default function LoginPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://192.168.1.55:5000/login',{username, password});
+            const response = await axios.post('http://127.0.0.1:5000/login',{username, password});
             // Handle response...
             console.log(response.data);
             navigate(`/user/${response.data.user_id}`);
         } catch (error) {
             console.error('Login error', error);
+            alert("invalid credential");
         }
     };
 
@@ -76,7 +77,7 @@ export default function LoginPage() {
             console.log(eemail);
             console.log(password);
 
-            const response = await axios.get('http://192.168.1.55:5000/admin', {
+            const response = await axios.get('http://127.0.0.1:5000/admin', {
                 params: {
                     eemail: adminMail,
                     password: adminPwd
@@ -86,6 +87,7 @@ export default function LoginPage() {
             navigate('/admin');
         }
         catch(err){
+            alert("invalid credential");
             console.error('Admin Login Error', err);
         }
     }
@@ -114,11 +116,11 @@ export default function LoginPage() {
                                 <div className='user-input-container'>
 
                                     <div>Username</div>
-                                    <input  name='username' type='text' value={username} onChange={(e)=>setusername(e.target.value)} ></input>
+                                    <input  name='username' type='text' required value={username} onChange={(e)=>setusername(e.target.value)} ></input>
                                 </div>
                                 <div className='user-input-container'>
                                     <div>Password</div>
-                                    <input name='password' type='password' value={password} onChange={(e)=>setPassword(e.target.value)}></input>
+                                    <input name='password' type='password' required value={password} onChange={(e)=>setPassword(e.target.value)}></input>
                                 </div>
                                 <div className='user-input-container user-button-container'>
                                     <button className='user-button'> Login</button>
@@ -136,16 +138,16 @@ export default function LoginPage() {
                                 <div className='user-input-container'>
 
                                     <div>E-mail</div>
-                                    <input name='mail' type='text' value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+                                    <input name='mail' type='text' required pattern='.+@gmail.com' value={email} onChange={(e)=>setEmail(e.target.value)}></input>
                                 </div>
                                 <div className='user-input-container'>
 
                                     <div>Username</div>
-                                    <input name='username' type='text' value={username} onChange={(e)=>setusername(e.target.value)}></input>
+                                    <input name='username' type='text' required value={username} onChange={(e)=>setusername(e.target.value)}></input>
                                 </div>
                                 <div className='user-input-container'>
                                     <div>Password</div>
-                                    <input name='password' type='password' value={password} onChange={(e)=>setPassword(e.target.value)}></input>
+                                    <input name='password' type='password' required value={password} onChange={(e)=>setPassword(e.target.value)}></input>
                                 </div>
                                 <div className='user-input-container user-button-container'>
                                     <button className='user-button'> Sign Up</button>
@@ -189,7 +191,7 @@ export default function LoginPage() {
                         <form className='admin-name' onSubmit={handleAdminLogin}>
                             <u>Admin Login</u>
                             <div>Admin mail:</div>
-                            <input className='admin-input' type='text' value={adminMail} onChange={(e)=>setAdminMail(e.target.value)}></input>
+                            <input className='admin-input' type='text' required pattern='.+@gmail.com' value={adminMail} onChange={(e)=>setAdminMail(e.target.value)}></input>
                             <div>Password:</div>
                             <input className='admin-input' type='password' value={adminPwd} onChange={(e)=>setAdminPwd(e.target.value)} ></input>
                             <div><button>Login</button></div>
